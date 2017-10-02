@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aless.lista_compras_app.ListaActivity">
+
+    <TextView
+        android:id="@+id/nomeListaId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ListView
+        android:id="@+id/listViewId"
+        android:layout_width="147dp"
+        android:layout_height="290dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nomeListaId"
+        android:layout_margin="5dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <EditText
+        android:id="@+id/produtoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/listViewId"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:hint="Produto"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/quantidadeId"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/produtoId"
+        android:layout_alignStart="@+id/produtoId"
+        android:layout_below="@+id/produtoId"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:hint="Qtde.:"
+        android:inputType="number" />
+
+    <Spinner
+        android:id="@+id/categoriaId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/quantidadeId"
+        android:layout_alignTop="@+id/quantidadeId"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/quantidadeId"
+        android:layout_toRightOf="@+id/quantidadeId" />
+
+    <CheckBox
+        android:id="@+id/perecivelId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/quantidadeId"
+        android:layout_alignRight="@+id/quantidadeId"
+        android:layout_below="@+id/quantidadeId"
+        android:layout_margin="5dp"
+        android:text="perecível" />
+
+    <Button
+        android:id="@+id/btSalvarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/categoriaId"
+        android:layout_alignLeft="@+id/categoriaId"
+        android:layout_alignRight="@+id/categoriaId"
+        android:layout_alignStart="@+id/categoriaId"
+        android:layout_alignTop="@+id/perecivelId"
+        android:layout_margin="5dp"
+        android:text="SALVAR" />
+
+</RelativeLayout>
